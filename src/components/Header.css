@@ -1,0 +1,16 @@
+.header {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    font-family: 'Cursive', sans-serif;
+    font-size: 2.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      font-size: 1.5rem;
+      padding: 20px;
+    }
+  }
+  
