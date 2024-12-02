@@ -6,6 +6,31 @@
 .santa-container {
   margin: 20px auto;
   position: relative;
+   
+  
+}
+.max{
+  font-size: 20px;
+  margin-top: 10px;
+  animation: zoomInOut 2s infinite; /* Apply the zoom animation */
+  background-color: #1c67b2;
+}
+.santa-container p {
+  font-size: 20px;
+  margin-top: 10px;
+  animation: zoomInOut 2s infinite; /* Apply the zoom animation */
+}
+/* Define the zoom animation */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    transform: scale(1.2); /* Zoomed-in size */
+  }
+  100% {
+    transform: scale(1); /* Back to normal size */
+  }
 }
 
 .santa-image {
@@ -20,9 +45,12 @@
 
 .greeting {
   margin-top: 20px;
-  font-size: 1.5rem;
-  color: #e74c3c;
-  font-weight: bold;
+  font-size: 80%;
+  color: #ffffff;
+  background-color: #1abc9c;
+
+
+  
 }
 /* Add Santa animations */
 @keyframes wave {
@@ -81,3 +109,147 @@
 .footer a:hover {
   text-decoration: underline;
 }
+/* Animation for the background gradient */
+@keyframes gradientAnimation {
+  0% {
+    background-color: #ff7a7a; /* Red */
+  }
+  25% {
+    background-color: #ffec61; /* Yellow */
+  }
+  50% {
+    background-color: #6b9ad4; /* Blue */
+  }
+  75% {
+    background-color: #3e7f4d; /* Green */
+  }
+  100% {
+    background-color: #ff7a7a; /* Red */
+  }
+}
+
+.App {
+  text-align: center;
+  animation: gradientAnimation 15s ease infinite; /* 15 seconds animation loop */
+  background-size: 400% 400%;
+  background-image: linear-gradient(45deg, #ff7a7a, #ffec61, #6b9ad4, #3e7f4d);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+/* For text and button styles */
+.App-header h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+  color: #61dafb;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #ff7a7a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #ffec61;
+}
+
+/* Add some hover effect for fun */
+button:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+
+/* App.css */
+
+/* General styles for all devices */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('F:\Merry Christmas\christmas-newyear-app\public/background.jpg');
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  background-position: center; /* Centers the image */
+}
+
+/* App.css */
+#ad-banner-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.greeting {
+  font-size: 1.5rem;
+  animation: bounce 1s ease infinite;
+}
+
