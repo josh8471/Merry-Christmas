@@ -11,9 +11,10 @@
 }
 .max{
   font-size: 20px;
+  ;
   margin-top: 10px;
   animation: zoomInOut 2s infinite; /* Apply the zoom animation */
-  background-color: #1c67b2;
+  background-color: #5614a7;
 }
 .santa-container p {
   font-size: 20px;
@@ -33,11 +34,7 @@
   }
 }
 
-.santa-image {
-  width: 250px; /* Adjust as needed */
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
+
 
 .santa-image:hover {
   transform: scale(1.1); /* Zoom in slightly when hovered */
@@ -46,8 +43,8 @@
 .greeting {
   margin-top: 20px;
   font-size: 80%;
-  color: #ffffff;
-  background-color: #1abc9c;
+  color: #000000;
+  background-color: #51b4ee;
 
 
   
@@ -76,7 +73,7 @@
 /* Share Button */
 .share-button {
   margin: 20px auto;
-  padding: 10px 20px;
+  padding: 15px 25px;
   font-size: 1rem;
   color: white;
   background-color: #e74c3c;
@@ -101,7 +98,7 @@
 }
 
 .footer a {
-  color: #1abc9c;
+  color: #1aa6bc;
   text-decoration: none;
   margin: 0 5px;
 }
@@ -148,7 +145,7 @@
 }
 
 .nav-link {
-  color: #61dafb;
+  color: #32c1e9;
   margin: 0 10px;
   text-decoration: none;
   font-size: 1.2em;
@@ -253,3 +250,25 @@ body {
   animation: bounce 1s ease infinite;
 }
 
+.Aboutus h1 {
+  font-size: 3em;
+   color: #ffffff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.Aboutus p {
+  font-size: 25px;
+   color: rgb(10, 10, 10);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.privacy p {
+  font-size: 25px;
+   color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.privacy h1 {
+  font-size: 25px;
+   color: rgb(255, 253, 248);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+}

@@ -1,18 +1,30 @@
 import React, { useState, useEffect } from "react";
-
 import "./App.css"; // Add any necessary CSS here
 import AdBanner from "./AdBanner"; // Import the AdBanner component
 import PrivacyPolicy from './PrivacyPolicy';
 import AboutUs from './AboutUs';
 import { Routes, Route } from 'react-router-dom'; // Import Routes and Route
 
-
-
-
-
 function App() {
+  // Array of greetings
+  const greetings = [
 
-  
+
+
+    
+    "🎄 Wishing you a joyous Christmas and a prosperous New Year filled with blessings and achievements. 🎉",
+    "🎅 Ho Ho Ho! Merry Christmas and a joyful New Year to you and your family! 🌟",
+    "✨ May your holidays sparkle with love, laughter, and cheer! Happy New Year! 🎆",
+    "❄️ Warm wishes for a Christmas full of peace and a New Year full of happiness! 🎁",
+    "🎉 Cheers to a wonderful year ahead and happy holiday moments with loved ones! 🥂",
+    "❤️May your Christmas be merry and bright... and may your New Year be full of laughter and light!🎉" ,
+    "😍😍😍क्रिसमस की ढेर सारी शुभकामनाएं! उम्मीद है, सांता आपको ढेर सारे तोहफे लाएगा! 🎉🎉🎉 Click on Santa's hand", 
+    "😍😍नया साल मुबारक हो! उम्मीद है, ये साल पिछले साल से ज्यादा अच्छा होगा (क्योंकि बुरा तो नहीं हो सकता!😂😂 Click on Santa's hand"
+
+
+
+  ];
+
   const [greeting, setGreeting] = useState("");
 
   useEffect(() => {
@@ -22,14 +34,12 @@ function App() {
 
     document.getElementById("ad-container").appendChild(script);
   }, []);
-  
+
   // Handle click event
   const handleSantaClick = () => {
-    setGreeting("🎄 Wishing you a joyous Christmas and a prosperous New Year filled with blessings and achievements. 🎉");
+    const randomIndex = Math.floor(Math.random() * greetings.length); // Select a random greeting
+    setGreeting(greetings[randomIndex]); // Update the greeting
   };
-
-
-
 
   const handleShare = () => {
     const shareData = {
@@ -48,27 +58,25 @@ function App() {
   };
 
   return (
-    
-    
-    
-    
-  <div className="app-container">
-    
-    <div className="max"> <p style={{color:"White"}}> <b> 🎉 Click Santa's hand for a Surprise! 🎉</b></p>
-    </div>
+    <div className="app-container">
+      <div className="max">
+        <p style={{ color: "White" }}>
+          <b> 🎉🎆❤️🎉😍 Click Santa's hand for a Surprise! 🎉🎆❤️🎉😍</b>
+        </p>
+      </div>
 
-    <AdBanner />
-      
-    <div className="santa-container">
+      <AdBanner />
+
+      <div className="santa-container">
         <img
           src="/santa.png"
           alt="Santa Claus"
           className="santa-image"
-          onClick={handleSantaClick}
+          onClick={handleSantaClick} // Add the click handler
         />
-       
       </div>
 
+      {/* Display the greeting */}
       {greeting && <div className="greeting">{greeting}</div>}
 
       {/* Share Button */}
@@ -77,18 +85,16 @@ function App() {
       </button>
 
       {/* Footer */}
-      
       <Routes>
-          <Route path="/privacy-policy" component={PrivacyPolicy} /> {/* Privacy Policy page */}
-          <Route path="/about-us" component={AboutUs} /> {/* About Us page */}
-        </Routes> 
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} /> {/* Privacy Policy page */}
+        <Route path="/about-us" element={<AboutUs />} /> {/* About Us page */}
+      </Routes>
       <footer className="footer">
         <p>© 2024 Created by Josh Basumatary</p>
         <a href="/privacy-policy">Privacy Policy</a> | <a href="/about-us">About Us</a>
       </footer>
     </div>
-   
-
   );
 }
-export default App
+
+export default App;

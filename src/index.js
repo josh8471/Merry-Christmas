@@ -7,12 +7,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import PrivacyPolicy from "./PrivacyPolicy";
 import AboutUs from "./AboutUs";
-import { BrowserRouter } from 'react-router-dom';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <React.StrictMode>
   <Router>
     <Routes>
       <Route path="/" element={<App />} />
@@ -20,14 +20,9 @@ root.render(
       <Route path="/about-us" element={<AboutUs />} />
     </Routes>
   </Router>
+  </React.StrictMode>
 );
 
-ReactDOM.render(
-  <BrowserRouter>  {/* Wrap your app here */}
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root')  // Render your app to the DOM
-);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
